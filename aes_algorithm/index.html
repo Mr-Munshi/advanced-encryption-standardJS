@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AES - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+      <div class="container justify-content-center">
+        <a class="navbar-brand" href="index.html" style="font-size: 25px"
+          >AES</a
+        >
+      </div>
+    </nav>
+
+    <main class="container h-100">
+      <div class="bg-light p-5 rounded h-100">
+        <form
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="mb-3">
+            <label for="text" class="form-label">Data To Encrypt</label>
+            <input
+              id="text"
+              type="text"
+              placeholder="Enter Text To Encrypt"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Key</label>
+            <input id="password" type="text" value="AES" class="form-control" />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="aes.encrypt()">
+            Encrypt
+          </button>
+          <div class="mb-3 mt-3">
+            <label for="EncryptedValue" class="form-label"
+              >Encrypted Value:</label
+            >
+            <p id="EncryptedValue" type="text" class="fw-bold"></p>
+          </div>
+          <button type="button" class="btn btn-success" onclick="aes.decrypt()">
+            Decrypt
+          </button>
+          <div class="mb-3 mt-3">
+            <label for="decrypted" class="form-label">Decrypted Value:</label>
+            <p id="decrypted" type="text" class="fw-bold"></p>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footerDesign footer mt-auto py-3 bg-dark">
+      <div class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html" style="font-size: 25px"
+            >AES</a
+          >
+          <div class="navbar-collapse justify-content-end">
+            <ul
+              class="navbar-nav mb-2 mt-2 mb-md-0 flex-row"
+              style="align-items: center"
+            >
+              <li class="nav-item text-end">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  style="font-size: 20px"
+                  >Follow Us:
+                </a>
+              </li>
+              <li class="nav-item text-end ms-3">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-facebook iconSize"></i
+                ></a>
+              </li>
+              <li class="nav-item text-end ms-3">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-twitter iconSize"></i
+                ></a>
+              </li>
+              <li class="nav-item text-end ms-3">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-github iconSize"></i
+                ></a>
+              </li>
+              <li class="nav-item text-end ms-3">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-linkedin iconSize"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" style="padding-left: 0; padding-right: 0">
+        <div class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container">
+            <ul class="navbar-nav mb-2 mt-2 mb-md-0 flex-row">
+              <li class="nav-item text-end">
+                <a class="nav-link" href="#">Privacy</a>
+              </li>
+              <li class="nav-item text-end ms-3">
+                <a class="nav-link" href="#">Policy</a>
+              </li>
+            </ul>
+            <div
+              class="navbar-collapse justify-content-end"
+              id="navbarCollapse"
+            >
+              <ul class="navbar-nav mb-2 mt-2 mb-md-0 flex-row">
+                <li class="nav-item text-end">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col" style="padding-left: 1.5rem; padding-right: 1.5rem">
+            <div class="copyright">
+              <p>
+                <small
+                  >&copy; <span id="year">2020</span> AES. All rights
+                  reserved.</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

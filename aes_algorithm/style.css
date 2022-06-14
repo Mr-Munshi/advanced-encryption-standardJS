@@ -1,0 +1,15 @@
+/* Icons */
+.white,
+.white a {
+  color: #fff;
+}
+.iconSize {
+  font-size: 25px;
+}
+/* Footer */
+.footerDesign .copyright {
+  border-top: 1px solid #fff;
+  padding-top: 30px;
+  text-align: center;
+  color: #fff;
+}
